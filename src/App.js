@@ -6,6 +6,7 @@ class App extends React.Component {
   state = {
     count: 0
   }
+  
   increase = () => {
     this.setState({ count: this.state.count + 1 })
   }
