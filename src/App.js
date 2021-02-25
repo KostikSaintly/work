@@ -3,6 +3,13 @@ import { View, Text } from "react-native";
 import Button from ".src/components/Button";
 
 class App extends React.Component {
+  state = {
+    count: 0
+  }
+  increase = () => {
+    this.setState({ count: this.state.count + 1 })
+  }
+
   render() {
     return (
       <View
@@ -12,7 +19,8 @@ class App extends React.Component {
           alignContent: "center"
         }}
       >
-        <Button />
+        <Text>{this.state.count}</Text>
+        <Button increase={this.increase} />
       </View>
     )
   }
