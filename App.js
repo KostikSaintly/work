@@ -11,7 +11,7 @@ class App extends React.Component{
             alignItems: "center"
           }}
         >
-          <Text> Hello World</Text>
+          <Text> Hello World 123</Text>
         </View>
      )
   }
