@@ -4,25 +4,28 @@ import Button from "./components/Button";
 
 class App extends React.Component {
   state = {
-    vName: '0',
-    vAge: 1
+    vName: '',
+    vAge: ''
   }
 
+
   done = () => {
-    this.setState({ vName: 0 });
+
   }
+
+
   render() {
     return (
       <View>
         <TextInput
           style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
           value={this.state.vName}
-          onChangeText={vName => this.setState(vName)}
+          onChangeText={(vName) => this.setState({ vName })}
         />
         <TextInput
           style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
           value={this.state.vAge}
-          onChangeText={vAge => this.setState(vAge)}
+          onChangeText={(vAge) => this.setState({ vAge })}
         />
         <Button done={this.done} />
       </View>
