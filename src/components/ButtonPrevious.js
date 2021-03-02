@@ -2,13 +2,14 @@ import React from "react";
 import { Text } from "react-native";
 import { TouchableOpacity } from "react-native";
 
-class ButtonNext extends React.Component {
+class ButtonPrevious extends React.Component {
     render() {
         return (
-            <TouchableOpacity onPress={this.props.nextImage}>
-                <Text>Next</Text>
+            <TouchableOpacity onPress={this.props.previousImage}>
+                <Text>Previous</Text>
             </TouchableOpacity>
         )
     }
 }
-export default ButtonNext;
+
+export default ButtonPrevious;
