@@ -13,30 +13,31 @@ class ImageList extends React.Component {
     render() {
         const { data, activeCategory, changeCategory } = this.props;
 
-        const category = data.find((category)=>category.id === activeCategory );
-        const images = data.reduce((prev, category)=>{
-            category.images.forEach((image)=>{
-                if (!prev.find((item)=>item.id === image.id )) {
+        const category = data.find((category) => category.id === activeCategory);
+        const images = data.reduce((prev, category) => {
+            category.images.forEach((image) => {
+                if (!prev.find((item) => item.id === image.id)) {
                     prev.push(image)
-                } 
+                }
             })
             return prev;
         }, [])
 
         return (
             <FlatList
-                data={category? category.images : images}
+                data={category ? category.images : images}
                 renderItem={this.renderItem}
-                keyExtractor={(image)=>String(image.id)}
+                keyExtractor={(image) => String(image.id)}
                 ListHeaderComponent={
-                <Categories
-                    categories={data} 
-                    activeCategory={activeCategory} 
-                    changeCategory={changeCategory} 
-                />}
-                ListEmptyComponent={<View style={{ height: 300, justifyContent: 'center', alignItems: 'center'}}>
-                    <Text>Ничего не найдено :(</Text>
-                </View>}
+                    <Categories
+                        categories={data}
+                        activeCategory={activeCategory}
+                        changeCategory={changeCategory}
+                    />}
+                ListEmptyComponent={
+                    <View>
+                        <Text>Nothing</Text>
+                    </View>}
             />
         )
     }

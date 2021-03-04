@@ -14,7 +14,7 @@ class App extends React.Component {
 
 
   render() {
-    const { categoriesImage, activeCategory} = this.state;
+    const { categoriesImage, activeCategory } = this.state;
 
     return (
       <ImageList

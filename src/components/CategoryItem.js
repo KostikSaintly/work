@@ -6,8 +6,8 @@ class CategoryItem extends React.Component {
         const { name, isActive, onPress } = this.props;
 
         return (
-            <TouchableOpacity style = {{ paddingHorizontal: 40 }} onPress={onPress}>
-                <Text style={{ color: isActive? 'red' : 'black' }}>{name}</Text>
+            <TouchableOpacity style={{ paddingHorizontal: 40 }} onPress={onPress}>
+                <Text style={{ color: isActive ? 'red' : 'black' }}>{name}</Text>
             </TouchableOpacity>
 
         )
